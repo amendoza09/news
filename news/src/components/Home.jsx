@@ -11,12 +11,12 @@ const HomePage = () => {
                 <TopStories />
             </div>
             <div className="w-full flex flex-row justify-center mt-5 py-10">
-                <div className="flex flex-col w-1/2">
+                <div className="flex flex-col w-1/2 pr-5">
                     <Card />
                     <Card />
                     <Card />
                 </div>
-                <div className="w-1/4 bg-black">
+                <div className="w-1/4 px-5 bg-black">
                     <h1>
                         ads
                     </h1>
