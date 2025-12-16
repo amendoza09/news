@@ -6,5 +6,5 @@ DB_URL = os.getenv("https://lvgiwkptombtgodbnbfe.supabase.co")
 
 engine = create_engine(DB_URL)
 SessionLocal = sessionmaker(bind=engine)
-Base = decalrative_base()
+Base = declarative_base()
 
