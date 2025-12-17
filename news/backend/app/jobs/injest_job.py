@@ -12,4 +12,13 @@ def run():
     
     for article in articles:
         scores = analyze(article.content)
-        
+        articles.subjectivity_score = scores["subjectivity"]
+        articles.bias_score = compute_bias(
+            scores["subjectivity"], scores["polarity"]
+        )
+    db.commit()
+    db.close()
+    
+scheduler = BackgrundScheduler()
+schedular.add_job(run, "interval", minutes = 30)
+schedular.start()
